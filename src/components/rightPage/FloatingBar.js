@@ -3,17 +3,20 @@ import './FloatingBar.css';
 
 function FloatingBar() {
     
-    const myStyle = {
-        width: '100px', // note the capital 'W' here
-        position: 'fixed',
-        right:"2px", // 'ms' is the only lowercase vendor prefix
-        top:"100px",
-        float:"right",
-        background: "#eea",
-        zIndex: 100 
-    };
     return (
-        <div id="floating-bar" style={myStyle}>ee</div>
+        <div id="floating-bar">
+            <table id="floating-table">
+                <thead>
+                    <header>11省</header>
+                    <tr>
+                        <th>序号</th>
+                        <th>站点名字</th>
+                        <th>所属城市</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     )
 }
 

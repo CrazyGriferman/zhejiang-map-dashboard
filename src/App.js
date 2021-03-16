@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/topPage/Header';
 import DashBoard from './components/centerPage/DashBoard';
 import FloatingBar from './components/rightPage/FloatingBar';
-import MarkerInfo from './components/centerPage/MarkerInfo';
 
 function App() {
   return (

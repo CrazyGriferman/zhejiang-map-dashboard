@@ -1,0 +1,11 @@
+#floating-bar {
+    width: 210px;
+    height: 200px;
+    position: fixed;
+    right: 2px;
+    top: 100px;
+    float: right;
+    background: #eea;
+    z-index: 100;
+    overflow-y: scroll;
+}
