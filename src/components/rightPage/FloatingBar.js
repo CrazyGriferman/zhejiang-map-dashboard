@@ -7,7 +7,7 @@ function FloatingBar() {
         <div id="floating-bar">
             <table id="floating-table">
                 <thead>
-                    <header>11省</header>
+                    <tr><th>11省</th></tr>
                     <tr>
                         <th>序号</th>
                         <th>站点名字</th>
