@@ -32,3 +32,14 @@ return v > 50
                 ? colors[1]
                 : colors[0];
 }
+
+export function *IdGenerator() {
+    let id = 1;
+    while(true) {
+        yield id++;
+    }
+}
+
+export function bigger(img) {
+    document.getElementById("gfg").style.color = "green";
+}

@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <Header />
-      <DashBoard />
       <FloatingBar />
+      <DashBoard />
     </>
   );
 }

@@ -1,0 +1,9 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #3653a3;
+    color: #666;
+    font-size: 0.1rem;
+  }

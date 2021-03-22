@@ -1,0 +1,15 @@
+.labelclass:hover{
+    color: blue;
+    text-shadow: 30px;
+}
+
+#mapbox {
+    position: static;
+    border-color: transparent;
+    
+}
+
+* {
+    cursor: default;
+    filter:alpha(opacity=0);
+}
