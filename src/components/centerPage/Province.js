@@ -16,12 +16,13 @@ function Province() {
                 logoVisible: false
             }}
                 map={{
-                    center: [114, 29],
+                    center: [340.2825, 89.9],
                     pitch: 0,
                     style: 'blank',
-                    zoom: 3,
+                    zoom: 6,
                     minZoom: 6,
                     maxZoom: 6,
+                    logoVisible: false
                 }}
             >
                 <SceneContext.Consumer>
@@ -62,37 +63,40 @@ function Province() {
                               // 写了十一个object literal，用来统计json里各个城市站点的个数
                             for (let i = 0; i < nodes.length; i++) {
                                 if (nodes[i].city === "杭州市") {
-                                    city.hangzhou.count++;
+                                    city.hangzhou.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "金华市") {
-                                    city.jinhua.count++;
+                                    city.jinhua.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "丽水市") {
-                                    city.lishui.count++;
+                                    city.lishui.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "温州市") {
-                                    city.wenzhou.count++;
+                                    city.wenzhou.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "台州市") {
-                                    city.taizhou.count++;
+                                    city.taizhou.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "宁波市") {
-                                    city.ningbo.count++;
+                                    city.ningbo.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "舟山市") {
-                                    city.zhoushan.count++;
+                                    city.zhoushan.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "绍兴市") {
-                                    city.shaoxing.count++;
+                                    city.shaoxing.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "嘉兴市") {
-                                    city.jiaxing.count++;
+                                    city.jiaxing.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "湖州市") {
-                                    city.huzhou.count++;
+                                    city.huzhou.count += nodes[i].count;
                                 }
                                 else if (nodes[i].city === "衢州市") {
-                                    city.quzhou.count++;
+                                    city.quzhou.count += nodes[i].count;
+                                }
+                                else if (nodes[i].city === "省直部属") {
+                                    city.zhishu.count += nodes[i].count;
                                 }
                             }
                             const markerLayer = new MarkerLayer({
@@ -106,28 +110,25 @@ function Province() {
                                 el.style = `
                                     top: 50%;
                                     transform: translateY(-50%);
-                                    font-size: 20px;
+                                    padding: 5px;
+                                    font-size: 12px;
                                     text-align: center;
-                                    width: 24px;
-                                    height: 24px;
+                                    width: 20px;
+                                    height: 20px;
                                     border-radius: 50%;
                                     background-color: #B9AF57;
                                     :hover {color: blue}
                                 `;
 
-
-                                
-                                
                                 const marker = new Marker({
                                     element: el
                                 }).setLnglat({ lng: city[i].longitude, lat: city[i].latitude});
                                 markerLayer.addMarker(marker);
                                 marker.on('click', (e) => {
-                                    const idIterator = IdGenerator();
                                     deleteTableContent();
                                     for(let j = 0; j < nodes.length; j++) {
                                         if(nodes[j].city === city[i].name) {
-                                            addTableContent(idIterator.next().value,nodes[j].name,nodes[j].city);
+                                            addTableContent(nodes[j].name,nodes[j].count,nodes[j].city);
                                         }
                                     }
                                 });

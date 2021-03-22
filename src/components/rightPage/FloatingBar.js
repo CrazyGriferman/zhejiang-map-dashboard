@@ -8,9 +8,9 @@ function FloatingBar() {
             <table id="fl-table">
                 <thead>
                     <tr>
-                        <th>序号</th>
-                        <th>站点名字</th>
-                        <th>所属城市</th>
+                        <th>站点类型</th>
+                        <th>数量</th>
+                        <th>城市</th>
                     </tr>
                 </thead>
                 <tbody></tbody>

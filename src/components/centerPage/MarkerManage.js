@@ -3,12 +3,12 @@ export function deleteTableContent() {
     tbodyEl.innerHTML = null;
 }
 
-export function addTableContent(number,name,city) {
+export function addTableContent(station,count,city) {
     const tbodyEl = document.querySelector("tbody");
     tbodyEl.innerHTML += `
         <tr>
-            <td>${number}</td>
-            <td>${name}</td>
+            <td>${station}</td>
+            <td>${count}</td>
             <td>${city}</td>
         </tr>
     `;
